@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor="let post of postList; index as i">
+        <div>
+            Id: {{post.id}}
+            <br>
+            Title: {{post.title}}
+            <br>
+            Desc: {{post.decs}}
+            <br>
+            Content: {{ post.content}}
+        </div>
+
+        <button (click)="togglePost(i)">edit</button>
+        <button (click)="deletePost(i)" class="alert alert-danger">delete</button>
+    </li>
+</ul>
