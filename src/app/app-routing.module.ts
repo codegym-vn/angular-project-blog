@@ -1,12 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {PostComponent} from './post/post.component';
+import {PostDetailComponent} from './post-detail/post-detail.component';
+
+const routes: Routes = [{
+    path: 'post',
+    component: PostComponent
+}, {
+    path: 'post/:id',
+    component: PostDetailComponent
+}
+];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  exports: [RouterModule],
-  declarations: []
+    imports: [
+        [RouterModule.forRoot(routes)],
+    ],
+    exports: [RouterModule],
+    declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

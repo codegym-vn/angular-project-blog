@@ -6,21 +6,20 @@ import {AppComponent} from './app.component';
 import {PostComponent} from './post/post.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PostDetailComponent} from './post-detail/post-detail.component';
-import {RouterModule} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
         AppComponent,
         PostComponent,
-        PostDetailComponent,
+        PostDetailComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        RouterModule.forRoot([])
+        ReactiveFormsModule
     ],
-    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {

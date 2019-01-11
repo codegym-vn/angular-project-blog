@@ -9,7 +9,7 @@ import {IPost} from './post';
 })
 export class PostService {
 
-    private readonly API_URL = 'http://127.0.0.1:8000/api/admin';
+    private readonly API_URL = 'http://127.0.0.1:8000/api/post';
 
     constructor(public http: HttpClient) {
     }
@@ -20,15 +20,18 @@ export class PostService {
         );
     }
 
-    getPostById(id: number): Observable<IPost[]> {
-        return this.http.get<IPost[]>(`${this.API_URL}/${id}`);
+    getPostById(id: number): Observable<IPost> {
+        return this.http.get<IPost>(`${this.API_URL}/${id}`);
+    }
+    createPost(post: Partial<IPost>): Observable<IPost> {
+        return this.http.post<IPost>(this.API_URL, post);
     }
 
     deletePost(id: number): Observable<any> {
-        return this.http.delete<IPost[]>(`${this.API_URL}/${id}`);
+        return this.http.delete(`${this.API_URL}/${id}`);
     }
 
     updatePost(post: IPost): Observable<IPost> {
-        return this.http.put<IPost>(`${this.API_URL}/${post.id}`, post);
+        return this.http.patch<IPost>(`${this.API_URL}/${post.id}`, post);
     }
 }

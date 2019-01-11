@@ -10,8 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PostDetailComponent implements OnInit {
 
-    Post: IPost[];
-
+    post: IPost;
     constructor(private postService: PostService,
                 private route: ActivatedRoute) {
     }
@@ -19,10 +18,10 @@ export class PostDetailComponent implements OnInit {
     ngOnInit() {
         const id = +this.route.snapshot.paramMap.get('id');
         this.postService.getPostById(id).subscribe(
-            next => (this.Post = next),
+            next => (this.post = next),
             error => {
                 console.log(error);
-                this.Post = null;
+                this.post = null;
             }
         );
     }

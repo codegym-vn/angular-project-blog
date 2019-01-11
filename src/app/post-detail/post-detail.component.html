@@ -1,9 +1,15 @@
-<!--<p>-->
-    <!--{{post.Id}}-->
-<!--</p>-->
-<!--<p>-->
-    <!--{{post.decs}}-->
-<!--</p>-->
-<!--<p>-->
-    <!--{{post.content}}-->
-<!--</p>-->
+<div *ngIf="post; else nothing">
+    <h4>
+        {{post.title}}
+    </h4>
+    <p>
+        {{post.content}}
+    </p>
+    <p>
+        {{post.decs}}
+    </p>
+</div>
+
+<ng-template #nothing>
+    <p>Nothing to show</p>
+</ng-template>
