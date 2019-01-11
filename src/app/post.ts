@@ -3,4 +3,5 @@ export interface IPost {
     title: string;
     decs: string;
     content: string;
+    image: string;
 }

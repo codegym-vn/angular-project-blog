@@ -1,15 +1,52 @@
-<div *ngIf="post; else nothing">
-    <h4>
-        {{post.title}}
-    </h4>
-    <p>
-        {{post.content}}
-    </p>
-    <p>
-        {{post.decs}}
-    </p>
-</div>
+<div class="container">
+    <div class="col-12">
+        <div class="card text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" [style.property]="">
+                <a class="navbar-brand" href="#">Blog</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                        </li>
 
-<ng-template #nothing>
-    <p>Nothing to show</p>
-</ng-template>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#">View Blog</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="card-body">
+            <div *ngIf="post; else nothing">
+                <div class="card mb-3">
+                    <img src="http://127.0.0.1:8000/storage/{{post.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.decs}}</p>
+                        <p class="card-text">{{post.content}}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <a [routerLink]="['/post']" class="btn btn-outline-success">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            BY TEAM WFC
+        </div>
+    </div>
+</div>

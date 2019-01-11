@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100)
+
+body{
+    color: #333;
+}
+
+#progressbar{
+  height: 26px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  background: rgba(159, 159, 159, 0.5);
+  border-radius: 10px;
+  margin: -20px 0 0 -100px;
+  padding: 2px;
+}
+
+#loading{
+  transition: all 500ms ease;
+  height: 20px;
+  width: calc(100% - 10px);
+  border-radius: 8px;
+  background: #474747;
+  position: absolute;
+  margin: 3px;
+  display: inline-block;
+  animation: load 15s ease infinite;
+}
+#load{
+  font-family: Arial;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -30px;
+}
+
+@keyframes load{
+  0%{
+    width: 2%;
+  }
+  10%{
+    width: 10%;
+  }
+}
