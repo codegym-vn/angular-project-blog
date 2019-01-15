@@ -1,7 +1,7 @@
 export interface IPost {
     id: number;
     title: string;
-    decs: string;
+    desc: string;
     content: string;
     image: string;
 }
