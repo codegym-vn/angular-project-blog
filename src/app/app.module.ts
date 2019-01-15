@@ -7,12 +7,16 @@ import {PostComponent} from './post/post.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PostDetailComponent} from './post-detail/post-detail.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
+
+
 
 @NgModule({
     declarations: [
         AppComponent,
         PostComponent,
-        PostDetailComponent
+        PostDetailComponent,
+        LoginFormComponent
     ],
     imports: [
         BrowserModule,
