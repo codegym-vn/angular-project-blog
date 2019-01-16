@@ -38,9 +38,12 @@
                         <div class="card" style="width: 18rem;" *ngFor="let post of postList; index as i">
                                 <a [routerLink]="['/post', post.id]">
                             <img src="http://127.0.0.1:8000/storage/{{post.image}}" class="card-img-top" alt="...">
-                        </a>
+
                             <div class="card-body">
                                     <h5 class="card-title">{{post.title}}</h5>
+                            </div>
+                                </a>
+                            <div class="card-body">
                                 <p class="card-text">{{post.decs}}.</p>
                             </div>
                         </div>
