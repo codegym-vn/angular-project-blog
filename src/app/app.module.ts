@@ -17,9 +17,6 @@ import { RouterModule, Routes } from '@angular/router';
         PostDetailComponent,
         RegisterComponent,
         LoginComponent,
-        
-        
-        
     ],
     imports: [
         BrowserModule,
@@ -28,9 +25,6 @@ import { RouterModule, Routes } from '@angular/router';
         ReactiveFormsModule,
         FormsModule,
         RouterModule,
-          
-       
-        
     ],
     bootstrap: [AppComponent],
     providers: []
