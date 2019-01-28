@@ -1,125 +1,87 @@
 <div class="container">
-    <div class="col-12">
+    <div class="col-md-12">
         <div class="card text-center">
-            <div class="card-header">        
-                <nav class="navbar navbar-expand-lg navbar-light bg-light" [style.property]="">
-                    <a class="navbar-brand" href="http://127.0.0.1:8000">Blog</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="#">BLOG</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Menu
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#">View Blog</a>
-                                    <div class="dropdown-divider"></div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="http://localhost:4200/post">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://codegymvn.slack.com/messages/DDZMMHF1V/">Content</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link">
+                                Menu
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse bd-highlight">
+                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/login']" >Register</button>
                     </div>
-                    <div>
-                        <a [routerLink]="['/register']" class="btn btn-outline-primary">Đăng ký</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="card-body">
-                <div>
-                    <div class="d-flex justify-content-around">
-                        <div class="card" style="width: 18rem;" *ngFor="let post of postList; index as i">
-                                <a [routerLink]="['/post', post.id]">
+                </div>
+            </nav>
+        </div>
+        <div class="card-body">
+            <div>
+                <div class="d-flex justify-content-around">
+                    <div class="card" style="width: 18rem;" *ngFor="let post of postList; index as i">
+                        <a [routerLink]="['/post', post.id]">
                             <img src="http://127.0.0.1:8000/storage/{{post.image}}" class="card-img-top" alt="...">
 
                             <div class="card-body">
-                                    <h5 class="card-title">{{post.title}}</h5>
+                                <h5 class="card-title">{{post.title}}</h5>
                             </div>
-                                </a>
-                            <div class="card-body">
-                                <p class="card-text">{{post.decs}}.</p>
-                            </div>
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">{{post.desc}}</p>
                         </div>
                     </div>
-
-                <!-- <div class="card-columns">
-                        <div class="card">
-                          <img src="https://codegym.vn/wp-content/uploads/2019/01/cach-hoc-ngon-ngu-lap-trinh-hieu-qua-nhat-4-400x250.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          </div>
+                </div>
+            </div>
+        <div class="col-md-12" style="background: #1d68a7">
+            <div class="d-flex justify-content-around">
+                <div class="col-md-4">
+                    <div>
+                        <div class="card-body">
+                            <h5>Giới Thiệu</h5>
+                            <a class="card-text">Về Blog</a>
+                            <br>
+                            <a class="card-text">Sản Phẩm về BLOG</a>
                         </div>
-                        <div class="card p-3">
-                          <blockquote class="blockquote mb-0 card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">
-                              <small class="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                              </small>
-                            </footer>
-                          </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <div class="card-body">
+                            <h5>Cộng Đồng</h5>
+                            <a class="card-text">Fanpage</a>
+                            <br>
+                            <a class="card-text">Nhóm Tác Giả</a>
+                            <br>
+                            <a class="card-text">Blogger</a>
                         </div>
-                        <div class="card">
-                          <img src="https://codegym.vn/wp-content/uploads/2019/01/cach-hoc-ngon-ngu-lap-trinh-hieu-qua-nhat-4-400x250.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <div class="card-body">
+                            <h5>Tài Nguyên</h5>
+                            <a class="card-text">Blog</a>
+                            <br>
+                            <a class="card-text">Tạp chí BLOG</a>
+                            <br>
+                            <a class="card-text">Tạp chí PlayBoy</a>
+                            <br>
+                            <a class="card-text">BLog Codegym</a>
                         </div>
-                        <div class="card bg-primary text-white text-center p-3">
-                          <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                            <footer class="blockquote-footer text-white">
-                              <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                              </small>
-                            </footer>
-                          </blockquote>
-                        </div>
-                        <div class="card text-center">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <img src="https://codegym.vn/wp-content/uploads/2019/01/lap-trinh-vien-la-gi-nhung-dieu-ban-can-biet-ve-lap-trinh-vien-1-400x250.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card p-3 text-right">
-                          <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">
-                              <small class="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                              </small>
-                            </footer>
-                          </blockquote>
-                        </div>
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                      </div>
-            </div> -->
-            <div class="card-footer text-muted">
-                BY TEAM WFC
+                    </div>
+                </div>
             </div>
         </div>
     </div>
