@@ -18,7 +18,8 @@ import { RouterModule, Routes } from '@angular/router';
         PostComponent,
         PostDetailComponent,
         RegisterComponent,
-        LoginComponent,      
+        LoginComponent,
+
     ],
     imports: [
         BrowserModule,
@@ -27,9 +28,6 @@ import { RouterModule, Routes } from '@angular/router';
         ReactiveFormsModule,
         FormsModule,
         RouterModule,
-          
-       
-        
     ],
     bootstrap: [AppComponent],
     providers: [AuthService]
