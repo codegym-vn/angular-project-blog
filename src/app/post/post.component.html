@@ -3,14 +3,16 @@
         <div class="card text-center">
             <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
                 <a class="navbar-brand" href="#">BLOG</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="http://localhost:4200/post">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="http://localhost:4200/post">Home <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://codegymvn.slack.com/messages/DDZMMHF1V/">Content</a>
@@ -22,10 +24,30 @@
                         </li>
                     </ul>
                     <div class="d-flex flex-row-reverse bd-highlight">
-                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/login']" >Register</button>
+                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/login']">Register
+                        </button>
                     </div>
                 </div>
             </nav>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(44).jpg"
+                         alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(90).jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(80).jpg" alt="Third slide">
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <div>
@@ -44,41 +66,42 @@
                     </div>
                 </div>
             </div>
-        <div class="col-md-12" style="background: #1d68a7">
-            <div class="d-flex justify-content-around">
-                <div class="col-md-4">
-                    <div>
-                        <div class="card-body">
-                            <h5>Giới Thiệu</h5>
-                            <a class="card-text">Về Blog</a>
-                            <br>
-                            <a class="card-text">Sản Phẩm về BLOG</a>
+            <div class="col-md-12" style="background: #1d68a7">
+                <div class="d-flex justify-content-around">
+                    <div class="col-md-4">
+                        <div>
+                            <div class="card-body">
+                                <h5>Giới Thiệu</h5>
+                                <a class="card-text">Về Blog</a>
+                                <br>
+                                <a class="card-text">Sản Phẩm về BLOG</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <div class="card-body">
-                            <h5>Cộng Đồng</h5>
-                            <a class="card-text">Fanpage</a>
-                            <br>
-                            <a class="card-text">Nhóm Tác Giả</a>
-                            <br>
-                            <a class="card-text">Blogger</a>
+                    <div class="col-md-4">
+                        <div>
+                            <div class="card-body">
+                                <h5>Cộng Đồng</h5>
+                                <a class="card-text">Fanpage</a>
+                                <br>
+                                <a class="card-text">Nhóm Tác Giả</a>
+                                <br>
+                                <a class="card-text">Blogger</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <div class="card-body">
-                            <h5>Tài Nguyên</h5>
-                            <a class="card-text">Blog</a>
-                            <br>
-                            <a class="card-text">Tạp chí BLOG</a>
-                            <br>
-                            <a class="card-text">Tạp chí PlayBoy</a>
-                            <br>
-                            <a class="card-text">BLog Codegym</a>
+                    <div class="col-md-4">
+                        <div>
+                            <div class="card-body">
+                                <h5>Tài Nguyên</h5>
+                                <a class="card-text">Blog</a>
+                                <br>
+                                <a class="card-text">Tạp chí BLOG</a>
+                                <br>
+                                <a class="card-text">Tạp chí PlayBoy</a>
+                                <br>
+                                <a class="card-text">BLog Codegym</a>
+                            </div>
                         </div>
                     </div>
                 </div>
